@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'bundler/setup'
+
+puts
+puts "Let's get wranglin'."
+
+Bundler.with_original_env do
+  puts `cd pasture && ./cow "Moo moo I'm a cow yo."`
+end
+
+puts `cd pasture && ./cow "WELL I NEVER"`
