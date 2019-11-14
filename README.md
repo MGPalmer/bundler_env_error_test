@@ -4,6 +4,7 @@ See this post for the full explanation: https://monogreen.home.blog/2019/11/14/s
 
 But in short: This is a test setup for what happens when you call one "inner" Ruby script from an "outer" directory, both with a Gemfile in it. The inner one will keep the gems set up in the outer one, and therefore will be missing its gems mysteriously. Using Bundler.with_original_env fixes this.
 
+```
 bundler_env_error_test $ ./wrangler 
 
 Let's get wranglin'.
@@ -18,4 +19,4 @@ Let's get wranglin'.
 Traceback (most recent call last):
 	1: from ./cow:5:in `<main>'
 ./cow:5:in `require': cannot load such file -- cowsay (LoadError)
-
+```
